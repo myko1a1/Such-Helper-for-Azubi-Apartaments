@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✏️ Such-Helper | Azubi-Apartaments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="">
+    <div class="content-container">
+        <header class="header-container">
+            <h1 class="header-title" data-key="headerTitle"></h1>
+            <p class="header-description" data-key="headerDesc"></p>
+        </header>
+        <div class="chat-window">
+            <!-- Pages Switcher -->
+            <div class="pages-container">
+                <button class="nav-btn active" data-page="teacher" data-key="teacherTitle"></button>
+                <button class="settings">⚙️</button>
+            </div>
+            <div class="chat">
+                <div class="ai-container">
+                    <div class="ai-logo">
+                        <p id="current-logo">👨‍🏫</p>
+                    </div>
+                    <div class="ai-status">
+                        <p data-key="assistentTeacher"> <span data-key="status">- </span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="message-field">
+                <div class="message-field-content" id="dynamic-content"></div>
+            </div>
+
+            <!-- ------------ Message Field | Input + Button ------------ -->
+            <div class="message-input-field">
+                <input class="message-input" type="text" data-key="inputPlaceholder">
+                <button class="send-button"><img
+                        src="./arrow_upward_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+                        alt="Senden Icon">
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-container">
+            <p data-key="footer"></p>
+            <p><a href="https://azubi-apartments-project.vercel.app/">Zurück zum Homepage</a></p>
+        </footer>
+    </div>
+    <!-- Modal Window -->
+    <div class="modal">
+        <div class="modal-container">
+            <span class="close-modal-btn">
+                <img class="icon-close" src="./close_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="close-modal"></span>
+            <h1 class="modal-title" data-key="settingsTitle"></h1>
+
+            <!-- Setting Menu -->
+            <div class="settings-content-container">
+                <h2 class="sett-content-title" data-key="chatClearTitle"></h2>
+                <button id="chat-delete">
+                    <img src="./delete_history_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="delete chat history">
+                </button>
+            </div>
+            <div class="delete-info">
+                <p data-key="chatClearInfo"></p>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+    <script src="askAI-webhook.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&family=Magra:wght@400;700&display=swap');
+:root {
+  --header-gradient: linear-gradient(
+    90deg,
+    #c6c6c6,
+    #bfbfbf,
+    #c6c6c6
+  );
+  --active-tab-gradient: linear-gradient(90deg, #c0ff72);
+  --logo-gradient: linear-gradient(90deg, #c0ff72, #8ec052, #c0ff72);
+  --thinking-gradient: linear-gradient(
+    90deg,
+    #ffffff,
+    #575757,
+    #ffffff,
+    #575757,
+    #ffffff
+  );
+
+  --text-main: rgb(0, 0, 0);
+  --text-muted: rgb(148, 148, 148);
+  --text-nav: #c0ff72;
+  --text-transparent: transparent;
+
+  --bg-chat-window: rgb(255, 255, 255);
+  --bg-nav-btn: rgb(226, 226, 226);
+  --bg-message-content: rgb(226, 226, 226);
+  --bg-user-msg: #c0ff72;
+  --bg-input: rgb(226, 226, 226);
+
+  --border-main: none;
+  --border-nav-bottom: rgb(226, 226, 226);
+  --border-accent: none;
+
+  --scrollbar-track: none;
+  --btn-send: #c0ff72;
+  --btn-send-hover: #789f48;
+  --thinking-gray: #575757;
+
+  background-image: none;
+  background-color: rgb(240, 239, 239);
+}
+
+/* ------------------------------------------------------------- */
+
+body {
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+}
+
+h1 {
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.content-container {
+  max-width: 950px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-title {
+  display: flex;
+  background: var(--header-gradient);
+  background-clip: text;
+  background-size: 200% 100%;
+  color: var(--text-transparent);
+  font-size: 40px;
+  font-family: "Magra";
+  animation: gradientMove 3s alternate infinite;
+}
+
+.header-description {
+  font-family: "Kite One";
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+.footer-container {
+  font-family: "Magra";
+  font-size: 16px;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.chat-window {
+  width: 100%;
+  height: 80vh;
+  background-color: var(--bg-chat-window);
+  border: 2px solid var(--border-main);
+  border-radius: 30px;
+}
+
+.pages-container {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  border-bottom: 2px solid var(--border-nav-bottom);
+}
+
+.pages-container button {
+  padding: 10px 20px 10px 20px;
+  width: 24%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: var(--bg-nav-btn);
+  border: 2px solid var(--border-main);
+  color: var(--text-nav);
+  font-family: "Magra";
+  font-weight: 600;
+  font-size: 18px;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.pages-container .active {
+  height: 95%;
+  background: var(--active-tab-gradient);
+  color: var(--text-main);
+  font-size: 22px;
+}
+
+.pages-container button:hover {
+  height: 95%;
+  color: var(--text-main);
+  font-size: 22px;
+  transition: 200ms;
+}
+
+.ai-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 22px 10px 10px 10px;
+}
+
+.ai-status p {
+  font-family: "Kite One";
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.ai-status p span {
+  font-family: "Kite One";
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.ai-logo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--logo-gradient);
+  border-radius: 30px;
+  background-size: 200% 100%;
+  animation: gradientMove 3s alternate infinite;
+  margin-left: 2%;
+}
+
+.message-field {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-field-content {
+  width: 95%;
+  height: 48vh;
+  background-color: var(--bg-message-content);
+  border: 2px solid var(--border-main);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  font-family: "Kite One";
+  overflow-y: scroll;
+}
+
+.ai-answer {
+  padding-left: 40px;
+  max-width: 550px;
+  width: 100%;
+  padding-top: 20px;
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 18px;
+  max-width: 85%;
+  padding-bottom: 4%;
+}
+
+.time-stamp {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.user-question {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--bg-user-msg);
+  color: var(--text-main);
+  max-width: 70%;
+  padding: 10px 12px 12px 10px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 17px;
+  margin-right: 10px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
+}
+
+.user-question-row {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 10px;
+  border: 2px solid var(--text-transparent);
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-accent);
+}
+
+.ai-thinking p {
+  background: var(--thinking-gradient);
+  background-size: 135% 100%;
+  animation: gradientMove 1s alternate infinite;
+  background-clip: text;
+  color: var(--text-transparent);
+  font-size: 18px;
+  margin-left: 2%;
+}
+
+.ai-thinking {
+  margin-top: 10px;
+  height: 18px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.message-input-field {
+  background-color: var(--bg-input);
+  max-width: 910px;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  border: 1px solid var(--border-accent);
+  border-radius: 20px;
+  margin-top: 10px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.message-input {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  width: 100%;
+  color: var(--text-main);
+  padding-left: 12px;
+  background-color: var(--bg-input);
+  border: none;
+  font-family: "Kite One";
+  font-size: 14px;
+  outline: none;
+}
+
+.send-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--btn-send);
+  border: none;
+  border-radius: 15px;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.send-button:hover {
+  background-color: var(--btn-send-hover);
+  cursor: pointer;
+}
+
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--text-muted);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+#chat-delete {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--text-muted);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.modal.activeModal {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* Modal Container */
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-nav-btn);
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Modal Burron */
+.close-modal-btn {
+  display: flex;
+  justify-content: end;
+  padding-right: 10px;
+  padding-top: 2px;
+}
+
+/* Close Icon */
+.icon-close {
+  width: 27px;
+  height: 27px;
+}
+
+.icon-close:hover {
+  cursor: pointer;
+}
+
+/* Modal title */
+.modal-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  font-family: "Magra";
+  font-size: 30px;
+  color: var(--text-main);
+}
+
+/* Setting Container */
+.settings-content-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Setting Title */
+.sett-content-title {
+  font-family: "Kite One";
+  font-size: 20px;
+  color: var(--text-main);
+}
+
+.delete-info {
+  padding-top: 15px;
+  font-family: "Magra";
+  font-size: 15px;
+  color: var(--text-main);
+}
