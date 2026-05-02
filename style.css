@@ -165,7 +165,8 @@ p {
 }
 
 .ai-status p {
-  font-family: "Kite One";
+  font-family: "Magra";
+  font-weight: 400;
   font-size: 20px;
   font-weight: 700;
   color: var(--text-main);
@@ -317,7 +318,7 @@ p {
   padding-left: 12px;
   background-color: var(--bg-input);
   border: none;
-  font-family: "Kite One";
+  font-family: "Magra";
   font-size: 14px;
   outline: none;
 }
