@@ -300,7 +300,7 @@ p {
 
 .message-input-field {
   background-color: var(--bg-input);
-  max-width: 910px;
+  width: 800px;
   display: flex;
   justify-content: center;
   margin-left: auto;
@@ -454,7 +454,9 @@ p {
   font-size: 15px;
   color: var(--text-main);
 }
-
+/* ========================================================= */
+/* ============= RESPONSIVE — MOBILE (≤ 768px) ============= */
+/* ========================================================= */
 
 @media (max-width: 768px) {
 
@@ -560,7 +562,9 @@ p {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-
+  .message-input-field{
+    width: 400px;
+  }
   .ai-answer {
     padding-left: 16px;
     padding-right: 16px;
@@ -632,7 +636,9 @@ p {
   }
 }
 
-
+/* ========================================================= */
+/* ============= EXTRA SMALL (≤ 380px) ===================== */
+/* ========================================================= */
 
 @media (max-width: 380px) {
   .header-title {
