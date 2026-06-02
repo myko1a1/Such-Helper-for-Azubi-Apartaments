@@ -2,8 +2,7 @@
   "de": {
     "headerTitle": "Such-Helper",
     "headerDesc": "Developed by Azubi-Apartaments",
-    "inputPlaceholder": "Schreib etwas... (Enter = Senden, Shift + Enter = Neue Zeile)",
-    "footer": "Such-Helper v1 - by Azubi-Aprtaments | 2026 | ",
+    "inputPlaceholder": "Schreib etwas...",
 
     "teacherTitle": "Chat",
     "teacherContent": "Hallo! Ich bin dein KI-Berater für Wohnungssuche.\n\nIch kann alle deine Fragen zum Thema Wohnungssuche beantworten.\n Screib die Fragen einfach an!",
