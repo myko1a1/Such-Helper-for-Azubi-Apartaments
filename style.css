@@ -6,7 +6,7 @@
     #bfbfbf,
     #c6c6c6
   );
-  --active-tab-gradient: linear-gradient(90deg, #c0ff72);
+  --active-tab-gradient: linear-gradient(90deg, #000000);
   --logo-gradient: linear-gradient(90deg, #c0ff72, #8ec052, #c0ff72);
   --thinking-gradient: linear-gradient(
     90deg,
@@ -17,19 +17,18 @@
     #ffffff
   );
 
-  --text-main: rgb(0, 0, 0);
-  --text-muted: rgb(148, 148, 148);
-  --text-nav: #c0ff72;
+  --text-main: rgb(255, 255, 255);
+  --text-muted: rgb(255, 255, 255);
+  --text-nav: #000000;
   --text-transparent: transparent;
 
-  --bg-chat-window: rgb(255, 255, 255);
-  --bg-nav-btn: rgb(226, 226, 226);
-  --bg-message-content: rgb(226, 226, 226);
-  --bg-user-msg: #c0ff72;
-  --bg-input: rgb(226, 226, 226);
+  --bg-chat-window: rgb(57, 57, 57);
+  --bg-nav-btn: rgb(95, 95, 95);
+  --bg-message-content: rgb(42, 42, 42);
+  --bg-user-msg: #000000;
 
   --border-main: none;
-  --border-nav-bottom: rgb(226, 226, 226);
+  --border-nav-bottom: rgb(0, 0, 0);
   --border-accent: none;
 
   --scrollbar-track: none;
@@ -48,6 +47,7 @@ body {
   display: flex;
   justify-content: center;
   background-size: cover;
+  background-color: black;
 }
 
 h1 {
@@ -175,9 +175,9 @@ p {
 }
 
 .ai-status p span {
-  font-family: "Kite One";
+  font-family: "Magra";
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--text-muted);
 }
 
@@ -210,7 +210,8 @@ p {
   border: 2px solid var(--border-main);
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
-  font-family: "Kite One";
+  font-family: "Magra";
+  font-weight: 400;
   overflow-y: scroll;
 }
 
@@ -299,14 +300,15 @@ p {
 }
 
 .message-input-field {
-  background-color: var(--bg-input);
   width: 800px;
   display: flex;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
-  border: 1px solid var(--border-accent);
+  background-color: rgba(0, 0, 0, 0.432);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   margin-top: 10px;
   outline: none;
@@ -318,9 +320,9 @@ p {
   padding-bottom: 20px;
   border-radius: 20px;
   width: 100%;
-  color: var(--text-main);
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
   padding-left: 12px;
-  background-color: var(--bg-input);
   border: none;
   font-family: "Magra";
   font-size: 14px;
@@ -383,6 +385,9 @@ p {
   transition: background-color 0.3s;
 }
 
+.footer-container a{
+  color: white;
+}
 .modal.activeModal {
   display: block;
   background-color: rgba(0, 0, 0, 0.5);
@@ -454,9 +459,6 @@ p {
   font-size: 15px;
   color: var(--text-main);
 }
-/* ========================================================= */
-/* ============= RESPONSIVE — MOBILE (≤ 768px) ============= */
-/* ========================================================= */
 
 @media (max-width: 768px) {
 
